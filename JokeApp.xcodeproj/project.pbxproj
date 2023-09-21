@@ -17,6 +17,14 @@
 		9471ACD92ABC673500F706D3 /* JokeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9471ACD82ABC673500F706D3 /* JokeAppTests.swift */; };
 		9471ACE32ABC673500F706D3 /* JokeAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9471ACE22ABC673500F706D3 /* JokeAppUITests.swift */; };
 		9471ACE52ABC673500F706D3 /* JokeAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9471ACE42ABC673500F706D3 /* JokeAppUITestsLaunchTests.swift */; };
+		9471ACF32ABC8E0A00F706D3 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9471ACF22ABC8E0A00F706D3 /* HTTPMethod.swift */; };
+		9471ACF52ABC8E2000F706D3 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9471ACF42ABC8E2000F706D3 /* APIService.swift */; };
+		9471ACF72ABC8E6B00F706D3 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9471ACF62ABC8E6B00F706D3 /* AppError.swift */; };
+		9471ACF92ABC8E9700F706D3 /* NetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9471ACF82ABC8E9700F706D3 /* NetworkSession.swift */; };
+		9471ACFB2ABC8ED300F706D3 /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9471ACFA2ABC8ED300F706D3 /* Requestable.swift */; };
+		9471ACFD2ABC8F0200F706D3 /* ApiEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9471ACFC2ABC8F0200F706D3 /* ApiEndpoint.swift */; };
+		9471ACFF2ABC8F1900F706D3 /* RequestConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9471ACFE2ABC8F1900F706D3 /* RequestConfigurable.swift */; };
+		9471AD012ABC8F7C00F706D3 /* NetworkConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9471AD002ABC8F7C00F706D3 /* NetworkConstant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +59,14 @@
 		9471ACDE2ABC673500F706D3 /* JokeAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JokeAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9471ACE22ABC673500F706D3 /* JokeAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeAppUITests.swift; sourceTree = "<group>"; };
 		9471ACE42ABC673500F706D3 /* JokeAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9471ACF22ABC8E0A00F706D3 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		9471ACF42ABC8E2000F706D3 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		9471ACF62ABC8E6B00F706D3 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		9471ACF82ABC8E9700F706D3 /* NetworkSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSession.swift; sourceTree = "<group>"; };
+		9471ACFA2ABC8ED300F706D3 /* Requestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
+		9471ACFC2ABC8F0200F706D3 /* ApiEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiEndpoint.swift; sourceTree = "<group>"; };
+		9471ACFE2ABC8F1900F706D3 /* RequestConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestConfigurable.swift; sourceTree = "<group>"; };
+		9471AD002ABC8F7C00F706D3 /* NetworkConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +117,7 @@
 		9471ACBD2ABC673400F706D3 /* JokeApp */ = {
 			isa = PBXGroup;
 			children = (
+				9471ACF12ABC8DEE00F706D3 /* Network */,
 				9471ACBE2ABC673400F706D3 /* AppDelegate.swift */,
 				9471ACC02ABC673400F706D3 /* SceneDelegate.swift */,
 				9471ACC22ABC673400F706D3 /* ViewController.swift */,
@@ -128,6 +145,21 @@
 				9471ACE42ABC673500F706D3 /* JokeAppUITestsLaunchTests.swift */,
 			);
 			path = JokeAppUITests;
+			sourceTree = "<group>";
+		};
+		9471ACF12ABC8DEE00F706D3 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				9471ACF22ABC8E0A00F706D3 /* HTTPMethod.swift */,
+				9471ACF42ABC8E2000F706D3 /* APIService.swift */,
+				9471ACF62ABC8E6B00F706D3 /* AppError.swift */,
+				9471ACF82ABC8E9700F706D3 /* NetworkSession.swift */,
+				9471ACFA2ABC8ED300F706D3 /* Requestable.swift */,
+				9471ACFC2ABC8F0200F706D3 /* ApiEndpoint.swift */,
+				9471ACFE2ABC8F1900F706D3 /* RequestConfigurable.swift */,
+				9471AD002ABC8F7C00F706D3 /* NetworkConstant.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,7 +296,15 @@
 				9471ACC32ABC673400F706D3 /* ViewController.swift in Sources */,
 				9471ACBF2ABC673400F706D3 /* AppDelegate.swift in Sources */,
 				9471ACC92ABC673400F706D3 /* JokeApp.xcdatamodeld in Sources */,
+				9471ACFB2ABC8ED300F706D3 /* Requestable.swift in Sources */,
+				9471AD012ABC8F7C00F706D3 /* NetworkConstant.swift in Sources */,
+				9471ACF32ABC8E0A00F706D3 /* HTTPMethod.swift in Sources */,
+				9471ACF52ABC8E2000F706D3 /* APIService.swift in Sources */,
+				9471ACFF2ABC8F1900F706D3 /* RequestConfigurable.swift in Sources */,
+				9471ACF92ABC8E9700F706D3 /* NetworkSession.swift in Sources */,
 				9471ACC12ABC673400F706D3 /* SceneDelegate.swift in Sources */,
+				9471ACF72ABC8E6B00F706D3 /* AppError.swift in Sources */,
+				9471ACFD2ABC8F0200F706D3 /* ApiEndpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,7 +486,6 @@
 				INFOPLIST_FILE = JokeApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -474,7 +513,6 @@
 				INFOPLIST_FILE = JokeApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
