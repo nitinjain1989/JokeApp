@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		9471ACBF2ABC673400F706D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9471ACBE2ABC673400F706D3 /* AppDelegate.swift */; };
 		9471ACC12ABC673400F706D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9471ACC02ABC673400F706D3 /* SceneDelegate.swift */; };
-		9471ACC32ABC673400F706D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9471ACC22ABC673400F706D3 /* ViewController.swift */; };
+		9471ACC32ABC673400F706D3 /* JokeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9471ACC22ABC673400F706D3 /* JokeViewController.swift */; };
 		9471ACC62ABC673400F706D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9471ACC42ABC673400F706D3 /* Main.storyboard */; };
 		9471ACC92ABC673400F706D3 /* JokeApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9471ACC72ABC673400F706D3 /* JokeApp.xcdatamodeld */; };
 		9471ACCB2ABC673500F706D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9471ACCA2ABC673500F706D3 /* Assets.xcassets */; };
@@ -25,6 +25,9 @@
 		9471ACFD2ABC8F0200F706D3 /* ApiEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9471ACFC2ABC8F0200F706D3 /* ApiEndpoint.swift */; };
 		9471ACFF2ABC8F1900F706D3 /* RequestConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9471ACFE2ABC8F1900F706D3 /* RequestConfigurable.swift */; };
 		9471AD012ABC8F7C00F706D3 /* NetworkConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9471AD002ABC8F7C00F706D3 /* NetworkConstant.swift */; };
+		9471AD092ABCACB200F706D3 /* JokeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9471AD082ABCACB200F706D3 /* JokeModel.swift */; };
+		9471AD0C2ABCACE200F706D3 /* JokeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9471AD0B2ABCACE200F706D3 /* JokeService.swift */; };
+		9471AD0E2ABCADF900F706D3 /* JokeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9471AD0D2ABCADF900F706D3 /* JokeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +51,7 @@
 		9471ACBB2ABC673300F706D3 /* JokeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JokeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9471ACBE2ABC673400F706D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9471ACC02ABC673400F706D3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9471ACC22ABC673400F706D3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9471ACC22ABC673400F706D3 /* JokeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeViewController.swift; sourceTree = "<group>"; };
 		9471ACC52ABC673400F706D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9471ACC82ABC673400F706D3 /* JokeApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JokeApp.xcdatamodel; sourceTree = "<group>"; };
 		9471ACCA2ABC673500F706D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -67,6 +70,9 @@
 		9471ACFC2ABC8F0200F706D3 /* ApiEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiEndpoint.swift; sourceTree = "<group>"; };
 		9471ACFE2ABC8F1900F706D3 /* RequestConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestConfigurable.swift; sourceTree = "<group>"; };
 		9471AD002ABC8F7C00F706D3 /* NetworkConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstant.swift; sourceTree = "<group>"; };
+		9471AD082ABCACB200F706D3 /* JokeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeModel.swift; sourceTree = "<group>"; };
+		9471AD0B2ABCACE200F706D3 /* JokeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeService.swift; sourceTree = "<group>"; };
+		9471AD0D2ABCADF900F706D3 /* JokeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,10 +123,13 @@
 		9471ACBD2ABC673400F706D3 /* JokeApp */ = {
 			isa = PBXGroup;
 			children = (
+				9471AD0A2ABCACD200F706D3 /* Service */,
+				9471AD072ABC90E600F706D3 /* Model */,
+				9471AD062ABC90D900F706D3 /* ViewModel */,
+				9471AD052ABC90D300F706D3 /* View */,
 				9471ACF12ABC8DEE00F706D3 /* Network */,
 				9471ACBE2ABC673400F706D3 /* AppDelegate.swift */,
 				9471ACC02ABC673400F706D3 /* SceneDelegate.swift */,
-				9471ACC22ABC673400F706D3 /* ViewController.swift */,
 				9471ACC42ABC673400F706D3 /* Main.storyboard */,
 				9471ACCA2ABC673500F706D3 /* Assets.xcassets */,
 				9471ACCC2ABC673500F706D3 /* LaunchScreen.storyboard */,
@@ -160,6 +169,38 @@
 				9471AD002ABC8F7C00F706D3 /* NetworkConstant.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		9471AD052ABC90D300F706D3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9471ACC22ABC673400F706D3 /* JokeViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9471AD062ABC90D900F706D3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9471AD0D2ABCADF900F706D3 /* JokeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9471AD072ABC90E600F706D3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9471AD082ABCACB200F706D3 /* JokeModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9471AD0A2ABCACD200F706D3 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				9471AD0B2ABCACE200F706D3 /* JokeService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,14 +334,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9471ACC32ABC673400F706D3 /* ViewController.swift in Sources */,
+				9471ACC32ABC673400F706D3 /* JokeViewController.swift in Sources */,
 				9471ACBF2ABC673400F706D3 /* AppDelegate.swift in Sources */,
+				9471AD092ABCACB200F706D3 /* JokeModel.swift in Sources */,
 				9471ACC92ABC673400F706D3 /* JokeApp.xcdatamodeld in Sources */,
+				9471AD0C2ABCACE200F706D3 /* JokeService.swift in Sources */,
 				9471ACFB2ABC8ED300F706D3 /* Requestable.swift in Sources */,
 				9471AD012ABC8F7C00F706D3 /* NetworkConstant.swift in Sources */,
 				9471ACF32ABC8E0A00F706D3 /* HTTPMethod.swift in Sources */,
 				9471ACF52ABC8E2000F706D3 /* APIService.swift in Sources */,
 				9471ACFF2ABC8F1900F706D3 /* RequestConfigurable.swift in Sources */,
+				9471AD0E2ABCADF900F706D3 /* JokeViewModel.swift in Sources */,
 				9471ACF92ABC8E9700F706D3 /* NetworkSession.swift in Sources */,
 				9471ACC12ABC673400F706D3 /* SceneDelegate.swift in Sources */,
 				9471ACF72ABC8E6B00F706D3 /* AppError.swift in Sources */,

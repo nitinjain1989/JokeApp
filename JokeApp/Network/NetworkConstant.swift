@@ -8,5 +8,5 @@
 import Foundation
 
 enum NetworkConstant {
-    static let BASE_URL = ""
+    static let BASE_URL = "https://geek-jokes.sameerkumar.website"
 }
