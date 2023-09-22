@@ -23,12 +23,15 @@ protocol JokeViewModelType {
 final class JokeViewModel: JokeViewModelType {
     
     let maxJokeCount = 10
+    let fetchJokeAfter: Double = 10 //seconds
     var jokes: [JokeModel] = []
     weak var delegate: JokeViewModelDelegate?
     private let service: JokeServicable
+    private let dispatchQueue: DispatchQueueType
     
-    init(service: JokeServicable) {
+    init(service: JokeServicable, dispatchQueue: DispatchQueueType = DispatchQueue.main) {
         self.service = service
+        self.dispatchQueue = dispatchQueue
     }
     
     func fetchJoke() {
@@ -66,9 +69,9 @@ extension JokeViewModel {
         let indexPath = IndexPath(row: 0, section: 0)
         delegate?.addJoke(indexPath: indexPath)
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 30 , execute:  DispatchWorkItem { [weak self] in
+        dispatchQueue.asyncAfter(time: .now() + fetchJokeAfter) { [weak self] in
             self?.fetchJoke()
-        })
+        }
     }
     
     private func handleAPIFailure(error: Error) {
