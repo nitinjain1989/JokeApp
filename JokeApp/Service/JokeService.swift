@@ -40,7 +40,7 @@ enum JokeEndPoint: Requestable {
 }
 
 protocol JokeServicable {
-    func getJoke(completionHandler: @escaping ((Result<String, Error>) -> Void))
+    func getJoke(completionHandler: @escaping ((Result<JokeModel, Error>) -> Void))
 }
 
 final class JokeService: JokeServicable {
@@ -54,12 +54,13 @@ final class JokeService: JokeServicable {
     func getJoke(completionHandler: @escaping ((Result<JokeModel, Error>) -> Void)) {
         let endPoint = JokeEndPoint.getJoke
         apiService.getString(endPoint, errorType: AppError.self) { result in
-            
-            switch result {
-            case .success(let joke):
-                completionHandler(.success(JokeModel(joke: joke)))
-            case .failure(let error):
-                completionHandler(.failure(error))
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let joke):
+                    completionHandler(.success(JokeModel(joke: joke)))
+                case .failure(let error):
+                    completionHandler(.failure(error))
+                }
             }
         }
     }

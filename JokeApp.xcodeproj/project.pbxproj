@@ -10,7 +10,6 @@
 		9471ACBF2ABC673400F706D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9471ACBE2ABC673400F706D3 /* AppDelegate.swift */; };
 		9471ACC12ABC673400F706D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9471ACC02ABC673400F706D3 /* SceneDelegate.swift */; };
 		9471ACC32ABC673400F706D3 /* JokeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9471ACC22ABC673400F706D3 /* JokeViewController.swift */; };
-		9471ACC62ABC673400F706D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9471ACC42ABC673400F706D3 /* Main.storyboard */; };
 		9471ACC92ABC673400F706D3 /* JokeApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9471ACC72ABC673400F706D3 /* JokeApp.xcdatamodeld */; };
 		9471ACCB2ABC673500F706D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9471ACCA2ABC673500F706D3 /* Assets.xcassets */; };
 		9471ACCE2ABC673500F706D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9471ACCC2ABC673500F706D3 /* LaunchScreen.storyboard */; };
@@ -28,6 +27,7 @@
 		9471AD092ABCACB200F706D3 /* JokeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9471AD082ABCACB200F706D3 /* JokeModel.swift */; };
 		9471AD0C2ABCACE200F706D3 /* JokeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9471AD0B2ABCACE200F706D3 /* JokeService.swift */; };
 		9471AD0E2ABCADF900F706D3 /* JokeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9471AD0D2ABCADF900F706D3 /* JokeViewModel.swift */; };
+		9471AD102ABD479600F706D3 /* JokeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9471AD0F2ABD479600F706D3 /* JokeTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +52,6 @@
 		9471ACBE2ABC673400F706D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9471ACC02ABC673400F706D3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		9471ACC22ABC673400F706D3 /* JokeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeViewController.swift; sourceTree = "<group>"; };
-		9471ACC52ABC673400F706D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9471ACC82ABC673400F706D3 /* JokeApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JokeApp.xcdatamodel; sourceTree = "<group>"; };
 		9471ACCA2ABC673500F706D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9471ACCD2ABC673500F706D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -73,6 +72,7 @@
 		9471AD082ABCACB200F706D3 /* JokeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeModel.swift; sourceTree = "<group>"; };
 		9471AD0B2ABCACE200F706D3 /* JokeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeService.swift; sourceTree = "<group>"; };
 		9471AD0D2ABCADF900F706D3 /* JokeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeViewModel.swift; sourceTree = "<group>"; };
+		9471AD0F2ABD479600F706D3 /* JokeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,7 +130,6 @@
 				9471ACF12ABC8DEE00F706D3 /* Network */,
 				9471ACBE2ABC673400F706D3 /* AppDelegate.swift */,
 				9471ACC02ABC673400F706D3 /* SceneDelegate.swift */,
-				9471ACC42ABC673400F706D3 /* Main.storyboard */,
 				9471ACCA2ABC673500F706D3 /* Assets.xcassets */,
 				9471ACCC2ABC673500F706D3 /* LaunchScreen.storyboard */,
 				9471ACCF2ABC673500F706D3 /* Info.plist */,
@@ -175,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				9471ACC22ABC673400F706D3 /* JokeViewController.swift */,
+				9471AD0F2ABD479600F706D3 /* JokeTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -309,7 +309,6 @@
 			files = (
 				9471ACCE2ABC673500F706D3 /* LaunchScreen.storyboard in Resources */,
 				9471ACCB2ABC673500F706D3 /* Assets.xcassets in Resources */,
-				9471ACC62ABC673400F706D3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +347,7 @@
 				9471ACF92ABC8E9700F706D3 /* NetworkSession.swift in Sources */,
 				9471ACC12ABC673400F706D3 /* SceneDelegate.swift in Sources */,
 				9471ACF72ABC8E6B00F706D3 /* AppError.swift in Sources */,
+				9471AD102ABD479600F706D3 /* JokeTableViewCell.swift in Sources */,
 				9471ACFD2ABC8F0200F706D3 /* ApiEndpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -385,14 +385,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		9471ACC42ABC673400F706D3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9471ACC52ABC673400F706D3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		9471ACCC2ABC673500F706D3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -530,8 +522,10 @@
 				INFOPLIST_FILE = JokeApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -557,8 +551,10 @@
 				INFOPLIST_FILE = JokeApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

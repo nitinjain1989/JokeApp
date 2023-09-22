@@ -18,10 +18,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
+        window.backgroundColor = UIColor.white
         let jokeViewModel = JokeViewModel(service: JokeService(apiService: APIService(networkSession: URLSession.shared)))
         let viewController = JokeViewController(viewModel: jokeViewModel)
+        let navVC = UINavigationController(rootViewController: viewController)
+        self.setUpNavigationBar()
         self.window = window
-        window.rootViewController = viewController
+        window.rootViewController = navVC
         window.makeKeyAndVisible()
     }
 
@@ -56,6 +59,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
     }
 
+    private func setUpNavigationBar() {
+        
+        if #available(iOS 15, *) {
+            let appearance = UINavigationBarAppearance()
+            appearance.configureWithDefaultBackground()
+            appearance.backgroundColor = UIColor.black
+            appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+            UINavigationBar.appearance().standardAppearance = appearance
+            UINavigationBar.appearance().scrollEdgeAppearance = appearance
+        }
+    }
 
 }
 
