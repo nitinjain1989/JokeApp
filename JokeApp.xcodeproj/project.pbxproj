@@ -26,6 +26,10 @@
 		9471AD0E2ABCADF900F706D3 /* JokeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9471AD0D2ABCADF900F706D3 /* JokeViewModel.swift */; };
 		9471AD102ABD479600F706D3 /* JokeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9471AD0F2ABD479600F706D3 /* JokeTableViewCell.swift */; };
 		9471AD122ABDF8A100F706D3 /* DispatchQueueType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9471AD112ABDF8A100F706D3 /* DispatchQueueType.swift */; };
+		9471AD162ABF356A00F706D3 /* PersistentStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9471AD152ABF356A00F706D3 /* PersistentStorage.swift */; };
+		9471AD192ABF362E00F706D3 /* Joke+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9471AD172ABF362E00F706D3 /* Joke+CoreDataClass.swift */; };
+		9471AD1A2ABF362E00F706D3 /* Joke+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9471AD182ABF362E00F706D3 /* Joke+CoreDataProperties.swift */; };
+		9471AD1D2ABF39F700F706D3 /* JokeDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9471AD1C2ABF39F700F706D3 /* JokeDataRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +54,10 @@
 		9471AD0D2ABCADF900F706D3 /* JokeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeViewModel.swift; sourceTree = "<group>"; };
 		9471AD0F2ABD479600F706D3 /* JokeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeTableViewCell.swift; sourceTree = "<group>"; };
 		9471AD112ABDF8A100F706D3 /* DispatchQueueType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueueType.swift; sourceTree = "<group>"; };
+		9471AD152ABF356A00F706D3 /* PersistentStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentStorage.swift; sourceTree = "<group>"; };
+		9471AD172ABF362E00F706D3 /* Joke+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Joke+CoreDataClass.swift"; sourceTree = "<group>"; };
+		9471AD182ABF362E00F706D3 /* Joke+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Joke+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		9471AD1C2ABF39F700F706D3 /* JokeDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeDataRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +90,8 @@
 		9471ACBD2ABC673400F706D3 /* JokeApp */ = {
 			isa = PBXGroup;
 			children = (
+				9471AD1B2ABF39D300F706D3 /* Repository */,
+				9471AD132ABF354D00F706D3 /* Database */,
 				9471AD0A2ABCACD200F706D3 /* Service */,
 				9471AD072ABC90E600F706D3 /* Model */,
 				9471AD062ABC90D900F706D3 /* ViewModel */,
@@ -144,6 +154,24 @@
 				9471AD0B2ABCACE200F706D3 /* JokeService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		9471AD132ABF354D00F706D3 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				9471AD172ABF362E00F706D3 /* Joke+CoreDataClass.swift */,
+				9471AD182ABF362E00F706D3 /* Joke+CoreDataProperties.swift */,
+				9471AD152ABF356A00F706D3 /* PersistentStorage.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		9471AD1B2ABF39D300F706D3 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				9471AD1C2ABF39F700F706D3 /* JokeDataRepository.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,12 +252,16 @@
 				9471AD0C2ABCACE200F706D3 /* JokeService.swift in Sources */,
 				9471ACFB2ABC8ED300F706D3 /* Requestable.swift in Sources */,
 				9471AD012ABC8F7C00F706D3 /* NetworkConstant.swift in Sources */,
+				9471AD162ABF356A00F706D3 /* PersistentStorage.swift in Sources */,
 				9471ACF32ABC8E0A00F706D3 /* HTTPMethod.swift in Sources */,
+				9471AD1D2ABF39F700F706D3 /* JokeDataRepository.swift in Sources */,
+				9471AD192ABF362E00F706D3 /* Joke+CoreDataClass.swift in Sources */,
 				9471ACF52ABC8E2000F706D3 /* APIService.swift in Sources */,
 				9471ACFF2ABC8F1900F706D3 /* RequestConfigurable.swift in Sources */,
 				9471AD0E2ABCADF900F706D3 /* JokeViewModel.swift in Sources */,
 				9471ACF92ABC8E9700F706D3 /* NetworkSession.swift in Sources */,
 				9471ACC12ABC673400F706D3 /* SceneDelegate.swift in Sources */,
+				9471AD1A2ABF362E00F706D3 /* Joke+CoreDataProperties.swift in Sources */,
 				9471ACF72ABC8E6B00F706D3 /* AppError.swift in Sources */,
 				9471AD102ABD479600F706D3 /* JokeTableViewCell.swift in Sources */,
 				9471ACFD2ABC8F0200F706D3 /* ApiEndpoint.swift in Sources */,

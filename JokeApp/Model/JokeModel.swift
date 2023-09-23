@@ -10,4 +10,5 @@ import Foundation
 struct JokeModel {
     
     var joke: String
+    var time: Double
 }

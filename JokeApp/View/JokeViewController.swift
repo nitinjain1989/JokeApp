@@ -79,9 +79,19 @@ extension JokeViewController: JokeViewModelDelegate {
         tableView.endUpdates()
     }
     
-    func removeJoke(indexPath: IndexPath) {
+    func removeJoke(indexPaths: [IndexPath]) {
         tableView.beginUpdates()
-        tableView.deleteRows(at: [indexPath], with: .none)
+        tableView.deleteRows(at: indexPaths, with: .none)
         tableView.endUpdates()
+    }
+    
+    func showError(message: String) {
+        let alertVC = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        alertVC.addAction(UIAlertAction(title: "Ok", style: .cancel))
+        self.present(alertVC, animated: true)
+    }
+    
+    func updateList() {
+        tableView.reloadData()
     }
 }

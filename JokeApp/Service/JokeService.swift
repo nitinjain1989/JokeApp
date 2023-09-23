@@ -57,7 +57,7 @@ final class JokeService: JokeServicable {
             DispatchQueue.main.async {
                 switch result {
                 case .success(let joke):
-                    completionHandler(.success(JokeModel(joke: joke)))
+                    completionHandler(.success(JokeModel(joke: joke, time: Date().timeIntervalSince1970)))
                 case .failure(let error):
                     completionHandler(.failure(error))
                 }

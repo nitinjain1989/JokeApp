@@ -13,7 +13,7 @@ protocol Errorable: Error {
 
 public enum AppError: Errorable {
     public var errorDescription: String {
-        return ""
+        return "Something went worng"
     }
     
     case badRequest
